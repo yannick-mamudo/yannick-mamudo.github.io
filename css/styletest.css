@@ -1,0 +1,47 @@
+.page {
+  float: left;
+  width: 100vw;
+  height: 100vh;
+}
+
+.docScroller {
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  -webkit-scroll-snap-points-y: repeat(100%);
+      -ms-scroll-snap-points-y: repeat(100%);
+          scroll-snap-points-y: repeat(100%);
+  -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+  -webkit-scroll-snap-destination: 100% 0%;
+      -ms-scroll-snap-destination: 100% 0%;
+          scroll-snap-destination: 100% 0%;
+}
+
+.inside {
+  background: yellow;
+  opacity: 0.3;
+  width: 80vw;
+  margin: 10vh 0 0 10vw;
+  height: 80vh;
+}
+
+.one {
+  background: blue;
+}
+
+.two {
+  background: purple;
+}
+
+.three {
+  background: red;
+}
+
+.four {
+  background: orange;
+}
