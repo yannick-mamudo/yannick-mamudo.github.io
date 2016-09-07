@@ -12,7 +12,7 @@ h2 {
 }
 
 #home-page {
-    background: url('Name.jpg') center / cover;
+    background: url('../images/Name.jpg') center / cover;
     height: 100%;
 }
 
@@ -44,7 +44,7 @@ h2 {
 }
 
 .about-image.mdl-card {
-    background: url('Name.jpg') center / cover;
+    background: url('../images/Name.jpg') center / cover;
 }
 
 .About>.mdl-cell {
