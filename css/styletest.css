@@ -31,7 +31,7 @@
 }
 
 .one {
-  background: blue;
+  background: url('../images/Name.jpg') center / cover;
 }
 
 .two {
@@ -44,4 +44,10 @@
 
 .four {
   background: orange;
+}
+
+.main-nav {
+  position: fixed;
+  width: 100%;
+  top: 0
 }
