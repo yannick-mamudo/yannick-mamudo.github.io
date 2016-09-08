@@ -1,9 +1,9 @@
+/* Shared CSS */
 .page {
   float: left;
   width: 100vw;
   height: 100vh;
 }
-
 .docScroller {
   overflow-x: hidden;
   position: absolute;
@@ -21,7 +21,6 @@
       -ms-scroll-snap-destination: 100% 0%;
           scroll-snap-destination: 100% 0%;
 }
-
 .inside {
   background: yellow;
   opacity: 0.3;
@@ -29,25 +28,109 @@
   margin: 10vh 0 0 10vw;
   height: 80vh;
 }
-
-.one {
-  background: url('../images/Name.jpg') center / cover;
+.page-title {
+  position: absolute;
+  margin: 4vh 0 0 10vw;
 }
 
-.two {
-  background: purple;
+  /* -> overwrite MDL */
+
+h1 {
+    font-size: 40 !important;
+}
+h2 {
+    font-size: 30 !important;
+}
+.mdl-navigation__link {
+    color: black !important;
+}
+.mdl-card__supporting-text {
+    color: black !important;
+    font-size:
+}
+.mdl-grid {
+    padding-left: 0px !important;
+}
+.mdl-card {
+    height: 40% !important;
 }
 
-.three {
-  background: red;
-}
-
-.four {
-  background: orange;
-}
-
+/* Header */
 .main-nav {
   position: fixed;
   width: 100%;
   top: 0
+}
+.mdl-navigation__link {
+    color: black !important;
+}
+
+/* Home page */
+
+#name {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    opacity: .8;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home {
+  background: url('../images/Name.jpg') center / cover;
+}
+
+#home > .inside {
+  background: none;
+  opacity: 1;
+}
+
+/* About page */
+
+#Name-about-image {
+    width: 310px;
+    height: 400px;
+    float: left;
+    padding: 0px 20px 0px 0px;
+    position: relative;
+}
+
+.about-image.mdl-card {
+    background: url('../images/Name.jpg') center / cover;
+}
+
+#about>div>div>div {
+    height: 37vh !important;
+}
+
+#about > .inside {
+  background: none;
+  opacity: 1;
+}
+
+/* Experience page*/
+
+#experience {
+  background: red;
+}
+
+/*Skills page*/
+
+#skills {
+  background: orange;
+}
+
+/* Footer */
+
+.mdl-mini-footer {
+    background-color: #fdeee3 !important;
+    color: black !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+}
+
+.fa {
+    height: 24px;
+    cursor: pointer;
 }
