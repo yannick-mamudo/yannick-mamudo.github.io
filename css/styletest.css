@@ -67,15 +67,20 @@ h2 {
 
 
 /* Header */
-
 .main-nav {
     position: fixed;
     width: 100%;
     top: 0
 }
-
 .mdl-navigation__link {
     color: black !important;
+}
+.active-nav {
+  background-color: blue !important;
+  opacity: 0.7 !important;
+  font-size: 18 !important;
+  font-weight: bold !important;
+  color: teal !important;
 }
 
 
@@ -114,9 +119,9 @@ h2 {
     background: url('../images/Name.jpg') center / cover;
 }
 
-#about>div>div>div {
+/*#about>div>div>div {
     height: 37vh !important;
-}
+}*/
 
 #about>.inside {
     background: none;
