@@ -76,11 +76,9 @@ h2 {
     color: black !important;
 }
 .active-nav {
-  background-color: blue !important;
-  opacity: 0.7 !important;
-  font-size: 18 !important;
+  font-size: 21px !important;
   font-weight: bold !important;
-  color: teal !important;
+  color: purple !important;
 }
 
 
