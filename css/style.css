@@ -1,3 +1,45 @@
+/* Shared CSS */
+
+.page {
+    float: left;
+    width: 100vw;
+    height: 100vh;
+}
+
+.docScroller {
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-scroll-snap-points-y: repeat(100%);
+    -ms-scroll-snap-points-y: repeat(100%);
+    scroll-snap-points-y: repeat(100%);
+    -webkit-scroll-snap-type: mandatory;
+    -ms-scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
+    -webkit-scroll-snap-destination: 100% 0%;
+    -ms-scroll-snap-destination: 100% 0%;
+    scroll-snap-destination: 100% 0%;
+}
+
+.inside {
+    background: yellow;
+    opacity: 0.3;
+    width: 80vw;
+    margin: 10vh 0 0 10vw;
+    height: 80vh;
+}
+
+.page-title {
+    position: absolute;
+    margin: 4vh 0 0 10vw;
+}
+
+
+/* -> overwrite MDL */
+
 h1 {
     font-size: 40 !important;
 }
@@ -6,34 +48,62 @@ h2 {
     font-size: 30 !important;
 }
 
-.fa {
-    height: 24px;
-    cursor: pointer;
+.mdl-navigation__link {
+    color: black !important;
 }
 
-#home-page {
-    background: url('../images/Name.jpg') center / cover;
-    height: 100%;
+.mdl-card__supporting-text {
+    color: black !important;
+    font-size:
+}
+
+.mdl-grid {
+    padding-left: 0px !important;
+}
+
+.mdl-card {
+    height: 40vh !important;
 }
 
 
-/*About Page styling*/
-
-#about-page {
-    height: 100%;
-    padding: 0px 30px 0px 30px;
+/* Header */
+.main-nav {
+    position: fixed;
+    width: 100%;
+    top: 0
 }
+.mdl-navigation__link {
+    color: black !important;
+}
+.active-nav {
+  font-size: 21px !important;
+  font-weight: bold !important;
+  color: purple !important;
+}
+
+
+/* Home page */
 
 #name {
     display: inline-block;
-    text-align: center;
-    margin-top: 130px;
-    padding-left: 10%;
+    text-align: right;
     width: 100%;
     opacity: .8;
     margin-left: auto;
     margin-right: auto;
 }
+
+#home {
+    background: url('../images/Name.jpg') center / cover;
+}
+
+#home>.inside {
+    background: none;
+    opacity: 1;
+}
+
+
+/* About page */
 
 #Name-about-image {
     width: 310px;
@@ -47,37 +117,34 @@ h2 {
     background: url('../images/Name.jpg') center / cover;
 }
 
-.About>.mdl-cell {
-    height: 37% !important;
+/*#about>div>div>div {
+    height: 37vh !important;
+}*/
+
+#about>.inside {
+    background: none;
+    opacity: 1;
 }
 
 
-/*Experience Page styling*/
+/* Experience page*/
 
-#experience-page {
-    height: 100%;
-    padding: 0px 30px 0px 30px;
+.card-image {
+    height: 40px;
+    padding: 20px 10px 0px 10px;
+    float: left;
 }
 
-#experience-page>.mdl-cell {
-    display: inline-block;
+#experience>.inside {
+    background: none;
+    opacity: 1;
 }
 
 
-/*Skills Page styling*/
+/*Skills page*/
 
-#skills-page {
-    text-align: center;
-    height: 100%;
-    padding: 0px 30px 0px 30px;
-}
-
-#skills-box {
-    padding-top: 10%;
-}
-
-.skill-group {
-    padding: 20px;
+#skills {
+  text-align: center;
 }
 
 .skills-group>.mdl-chip {
@@ -96,42 +163,13 @@ h2 {
     background-color: #aed8ae;
 }
 
-
-/*Overall Page styling*/
-
-.mdl-navigation__link {
-    color: black !important;
-}
-
-.mdl-card__supporting-text {
-    color: black !important;
-    font-size:
-}
-
-.mdl-grid {
-    padding-left: 0px !important;
-}
-
-.mdl-card {
-    height: 40% !important;
-}
-
-.card-image {
-    height: 40px;
-    padding: 20px 10px 0px 10px;
-    float: left;
-}
-
-.card-title {
-    position: relative;
-}
-
-.page-title {
-    padding-bottom: 50px;
+#skills > .inside {
+    background: none;
+    opacity: 1;
 }
 
 
-/*footer styling*/
+/* Footer */
 
 .mdl-mini-footer {
     background-color: #fdeee3 !important;
@@ -141,40 +179,7 @@ h2 {
     -ms-flex-pack: center !important;
 }
 
-
-/*media queries*/
-
-@media screen and (max-width: 650px) and (min-width: 450px) {
-    #Name-about-image {
-        position: left;
-        width: 100%;
-    }
-    #Name-about-text {
-        position: right;
-        width: 100%;
-    }
-    #Name h1 {
-        font-size: 27 !important;
-    }
-    #Name h2 {
-        font-size: 20 !important;
-    }
-}
-
-@media screen and (max-width: 840px) {
-    #experience-page {
-        height: 150%;
-    }
-    .mdl-card {
-        height: 230px !important;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    #Name h1 {
-        font-size: 21 !important;
-    }
-    #Name h2 {
-        font-size: 15 !important;
-    }
+.fa {
+    height: 24px;
+    cursor: pointer;
 }

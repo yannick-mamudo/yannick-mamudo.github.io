@@ -1,0 +1,180 @@
+h1 {
+    font-size: 40 !important;
+}
+
+h2 {
+    font-size: 30 !important;
+}
+
+.fa {
+    height: 24px;
+    cursor: pointer;
+}
+
+#home-page {
+    background: url('../images/Name.jpg') center / cover;
+    height: 100%;
+}
+
+
+/*About Page styling*/
+
+#about-page {
+    height: 100%;
+    padding: 0px 30px 0px 30px;
+}
+
+#name {
+    display: inline-block;
+    text-align: center;
+    margin-top: 130px;
+    padding-left: 10%;
+    width: 100%;
+    opacity: .8;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Name-about-image {
+    width: 310px;
+    height: 400px;
+    float: left;
+    padding: 0px 20px 0px 0px;
+    position: relative;
+}
+
+.about-image.mdl-card {
+    background: url('../images/Name.jpg') center / cover;
+}
+
+.About>.mdl-cell {
+    height: 37% !important;
+}
+
+
+/*Experience Page styling*/
+
+#experience-page {
+    height: 100%;
+    padding: 0px 30px 0px 30px;
+}
+
+#experience-page>.mdl-cell {
+    display: inline-block;
+}
+
+
+/*Skills Page styling*/
+
+#skills-page {
+    text-align: center;
+    height: 100%;
+    padding: 0px 30px 0px 30px;
+}
+
+#skills-box {
+    padding-top: 10%;
+}
+
+.skill-group {
+    padding: 20px;
+}
+
+.skills-group>.mdl-chip {
+    background-color: #e67987;
+}
+
+.languages-group>.mdl-chip {
+    background-color: #929cd7;
+}
+
+.tools-group>.mdl-chip {
+    background-color: #fec39b;
+}
+
+.frameworks-group>.mdl-chip {
+    background-color: #aed8ae;
+}
+
+
+/*Overall Page styling*/
+
+.mdl-navigation__link {
+    color: black !important;
+}
+
+.mdl-card__supporting-text {
+    color: black !important;
+    font-size:
+}
+
+.mdl-grid {
+    padding-left: 0px !important;
+}
+
+.mdl-card {
+    height: 40% !important;
+}
+
+.card-image {
+    height: 40px;
+    padding: 20px 10px 0px 10px;
+    float: left;
+}
+
+.card-title {
+    position: relative;
+}
+
+.page-title {
+    padding-bottom: 50px;
+}
+
+
+/*footer styling*/
+
+.mdl-mini-footer {
+    background-color: #fdeee3 !important;
+    color: black !important;
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+}
+
+
+/*media queries*/
+
+@media screen and (max-width: 650px) and (min-width: 450px) {
+    #Name-about-image {
+        position: left;
+        width: 100%;
+    }
+    #Name-about-text {
+        position: right;
+        width: 100%;
+    }
+    #Name h1 {
+        font-size: 27 !important;
+    }
+    #Name h2 {
+        font-size: 20 !important;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #experience-page {
+        height: 150%;
+    }
+    .mdl-card {
+        height: 230px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #Name h1 {
+        font-size: 21 !important;
+    }
+    #Name h2 {
+        font-size: 15 !important;
+    }
+}
