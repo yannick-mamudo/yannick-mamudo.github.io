@@ -4,6 +4,7 @@ $ = jQuery;
 
 // $sections includes all of the page divs that relate to menu items.
 var $sections = $('.page');
+var $ft = $('#more');
 
 $(function() {
     navbarUpdater();
@@ -18,15 +19,21 @@ function navbarUpdater() {
     var $currentSection;
     var $minDistance = Number.POSITIVE_INFINITY;
 
-    $sections.each(function() {
-        // divDistance is the distance(in px) of the head of a div to the head of the view/window
-        var $divDistance = Math.abs($(this).offset().top);
-        console.log($divDistance.toString());
-        if ($divDistance <= $minDistance) {
-            $currentSection = $(this);
-            $minDistance = $divDistance;
-        }
-    });
+    //first check footer since it is not a .page div
+    if ($ft.offset().top < $( window ).height()) {
+      $currentSection = $ft;
+    }
+    else {
+      $sections.each(function() {
+          // divDistance is the distance(in px) of the head of a div to the head of the view/window
+          var $divDistance = Math.abs($(this).offset().top);
+          console.log($divDistance.toString());
+          if ($divDistance <= $minDistance) {
+              $currentSection = $(this);
+              $minDistance = $divDistance;
+          }
+      });
+    }
 
     // Removes .active-nav from all nav bar options then applies it to appropriate button
     var id = $currentSection.attr('id');
