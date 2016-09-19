@@ -32,11 +32,11 @@
 /* -> overwrite MDL */
 
 h1 {
-    font-size: 40 !important;
+    font-size: 40px !important;
 }
 
 h2 {
-    font-size: 30 !important;
+    font-size: 30px !important;
 }
 
 .mdl-navigation__link {
