@@ -10,7 +10,7 @@ $(function() {
     navbarUpdater();
 
     // The user scrolls
-    $('.docScroller').scroll(function() {
+    $(window).scroll(function() {
         navbarUpdater();
     });
 });
@@ -20,19 +20,19 @@ function navbarUpdater() {
     var $minDistance = Number.POSITIVE_INFINITY;
 
     //first check footer since it is not a .page div
-    if ($ft.offset().top < $( window ).height()) {
-      $currentSection = $ft;
-    }
-    else {
-      $sections.each(function() {
-          // divDistance is the distance(in px) of the head of a div to the head of the view/window
-          var $divDistance = Math.abs($(this).offset().top);
-          console.log($divDistance.toString());
-          if ($divDistance <= $minDistance) {
-              $currentSection = $(this);
-              $minDistance = $divDistance;
-          }
-      });
+    if ($(window).scrollTop() > (3 * $(window).height())) {
+        $currentSection = $ft;
+    } else {
+        $sections.each(function() {
+            // divDistance is the distance(in px) of the head of a div to the head of the view/window
+            var $divDistance = Math.abs($('body').scrollTop() - $(this).offset().top);
+            console.log($(this).attr('id'));
+            console.log($divDistance);
+            if ($divDistance <= $minDistance) {
+                $currentSection = $(this);
+                $minDistance = $divDistance;
+            }
+        });
     }
 
     // Removes .active-nav from all nav bar options then applies it to appropriate button
@@ -40,3 +40,12 @@ function navbarUpdater() {
     $('a').removeClass('active-nav');
     $("[href='#" + id + "']").addClass('active-nav');
 }
+
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        $target = $(this.hash);
+        $('body').animate({
+            scrollTop: $target.offset().top
+        }, 1000);
+    });
+});
