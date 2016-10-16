@@ -1,7 +1,7 @@
 {
   "name": "yannick-mamudo",
   "version": "1.0.0",
-  "description": "",
+  "description": " Holds all npm dependencies for my personal website :) ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yannick-mamudo/yannick-mamudo.github.io#readme",
   "dependencies": {
+    "devicon": "^2.0.0",
     "material-design-lite": "^1.2.1"
   }
 }
