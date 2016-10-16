@@ -26,8 +26,8 @@ function navbarUpdater() {
         $sections.each(function() {
             // divDistance is the distance(in px) of the head of a div to the head of the view/window
             var $divDistance = Math.abs($('body').scrollTop() - $(this).offset().top);
-            console.log($(this).attr('id'));
-            console.log($divDistance);
+            // console.log($(this).attr('id'));
+            // console.log($divDistance);
             if ($divDistance <= $minDistance) {
                 $currentSection = $(this);
                 $minDistance = $divDistance;
