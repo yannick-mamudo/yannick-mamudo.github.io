@@ -7,8 +7,8 @@
 }
 
 .inside {
-    background: yellow;
-    opacity: 0.3;
+    /*background: yellow;
+    opacity: 0.3;*/
     width: 80vw;
     margin: 10vh 0 0 10vw;
     height: 80vh;
@@ -19,24 +19,15 @@
     margin: 4vh 0 0 10vw;
 }
 
-
+/**/
 /* -> overwrite MDL */
-
+/**/
 h1 {
-    font-size: 50px !important;
+    font-size: 60px !important;
 }
 
 h2 {
-    font-size: 30px !important;
-}
-
-.mdl-navigation__link {
-    color: black !important;
-}
-
-.mdl-card__supporting-text {
-    color: black !important;
-    font-size:
+    font-size: 32px !important;
 }
 
 .mdl-grid {
@@ -47,9 +38,9 @@ h2 {
     height: 40vh !important;
 }
 
-
+/**/
 /* Header */
-
+/**/
 .main-nav {
     position: fixed;
     width: 100%;
@@ -57,25 +48,50 @@ h2 {
 }
 
 .mdl-navigation__link {
-    color: black !important;
+    font-weight: 900 !important;
+    font-size: 15px !important;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.nav1 {
+  color: #74887C !important;
+}
+
+.nav2 {
+  color: #7D6A88 !important;
+}
+
+.nav3 {
+  color: #87516A !important;
+}
+
+.nav4 {
+  color: #827E61 !important;
+}
+
+.nav5 {
+  color: #5D7A88 !important;
 }
 
 .active-nav {
-    font-size: 21px !important;
-    font-weight: bold !important;
-    color: purple !important;
+    transform: scale(1.5);
 }
 
-
+/**/
 /* Home page */
-
+/**/
 #name {
     display: inline-block;
     text-align: right;
     width: 100%;
-    opacity: .8;
+    opacity: .85;
     margin-left: auto;
     margin-right: auto;
+}
+
+#name>h1 {
+  font-weight: 900;
 }
 
 #home {
@@ -87,8 +103,12 @@ h2 {
     opacity: 1;
 }
 
-
+/**/
 /* About page */
+/**/
+#about {
+  background-color: #FDFBFE;
+}
 
 #about>.inside {
     display: flex;
@@ -103,11 +123,12 @@ h2 {
 }
 
 #about-pic img {
-    border-radius: 50%;
     height: 200px;
     width: 200px;
+    border-radius: 50%;
     border-style: groove;
     border-width: 3px;
+    border-color: #c1ccdd;
     transition: transform 0.5s ease;
     transform: scale(0.9);
 }
@@ -131,9 +152,12 @@ h2 {
     opacity: 1;
 }
 
-
+/**/
 /* Experience page*/
-
+/**/
+#experience {
+  background-color: #FEF9FB;
+}
 .card-image {
     height: 40px;
     padding: 20px 10px 0px 10px;
@@ -145,11 +169,48 @@ h2 {
     opacity: 1;
 }
 
+.Experience {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 
+.mdl-card {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.mdl-card__supporting-text {
+  background-color: #FDFCFE;
+}
+
+.card-head {
+  color: black;
+  font-weight: bold !important;
+}
+
+.msi-card>.mdl-card__title {
+    background: url('../images/msi_internship.png') center / cover;
+}
+
+.bdo-card>.mdl-card__title {
+    background: url('../images/bdo_internship.png') center / cover;
+}
+
+.eecs349-card>.mdl-card__title {
+    background: url('../images/eecs349.png') center / cover;
+}
+
+.wip-card>.mdl-card__title {
+    background: url('../images/wip.png') center / cover;
+}
+
+/**/
 /*Skills page*/
-
+/**/
 #skills {
     text-align: center;
+    background-color: #FDFDFA;
 }
 
 .mdl-chip {
@@ -158,36 +219,34 @@ h2 {
 }
 
 .mdl-chip:hover {
-    transform: scale(1.2);
-}
-
-.skills-group>.mdl-chip {
-    background-color: #e67987;
+    transform: scale(1.1);
 }
 
 .languages-group>.mdl-chip {
-    background-color: #929cd7;
+  background-color: #D3F8E2;
 }
-
-.tools-group>.mdl-chip {
-    background-color: #fec39b;
+.skills-group>.mdl-chip {
+    background-color: #E4C1F9;
 }
-
 .frameworks-group>.mdl-chip {
-    background-color: #aed8ae;
+  background-color: #F694C1;
 }
+.tools-group>.mdl-chip {
+    background-color: #EDE7B1;
+}
+
 
 #skills>.inside {
     background: none;
     opacity: 1;
 }
 
-
+/**/
 /* Footer */
-
+/**/
 .mdl-mini-footer {
-    background-color: #fdeee3 !important;
-    color: black !important;
+    background-color: #D7F0FC !important;
+    color: #3E515B !important;
     justify-content: center !important;
     -webkit-justify-content: center !important;
     -ms-flex-pack: center !important;
@@ -205,12 +264,23 @@ h2 {
 }
 
 .fa-file-text-o {
-    color: #fdeee3;
+    color: #D7F0FC;
 }
 
+/**/
+/* Responsive Media Queries */
+/**/
 @media screen and (max-width: 840px) {
+    #about-pic img {
+        height: 130px;
+        width: 130px;
+        border-width: 3px;
+    }
+    #about-text>p {
+        font-size: 14px;
+    }
     #experience {
-        height: 150vh;
+        height: 130vh;
     }
     .mdl-card {
         height: 230px !important;
@@ -218,10 +288,28 @@ h2 {
 }
 
 @media screen and (max-width: 450px) {
+    #about-text>p {
+        font-size: 12px;
+    }
+    #experience {
+        height: 145vh;
+    }
     #name>h1 {
-        font-size: 21px !important;
+        font-size: 30px !important;
     }
     #name>h2 {
-        font-size: 15px !important;
+        font-size: 20px !important;
     }
+}
+
+@media screen and (max-width: 370px) {
+  #experience {
+      height: 160vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #experience {
+      height: 170vh;
+  }
 }
